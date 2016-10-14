@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+class complex
+{
+float real;
+float imag;
+public:
+complex()
+{
+ real=imag=0;
+}
+void getdata()
+{
+cout<<"enter the real part"<<endl;
+cin>>real;
+cout<<"enter the imaginary part"<<endl;
+cin>>imag;
+}
+void display()
+{
+cout<<real<<"+(i)"<<imag<<endl;
+}
+complex operator +(complex c2)
+{
+complex temp;
+temp.real=real+c2.real;
+temp.imag=imag+c2.imag;
+return(temp);
+}
+};
+void main()
+{
+clrscr();
+complex c1,c2,c3;
+cout<<"first complex number"<<endl;
+c1.getdata();
+c1.display();
+cout<<"second complex number"<<endl;
+c2.getdata();
+c2.display();
+cout<<"sum of complex numbers is"<<endl;
+c3=c1.operator +(c2);
+c3.display();
+getch();
+}

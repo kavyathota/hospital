@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+FILE *fp,*p;
+int no,i,count=0;
+clrscr();
+fp=fopen("data","w");
+printf("enter number into the files\n");
+printf("-1 to stop\n");
+for(i=1;i<=100;i++)
+{
+scanf("%d",&no);
+if(no==-1)
+break;
+putw(no,fp);
+}
+fclose(fp);
+p=fopen("prime","w");
+fp=fopen("data","r");
+while((no=getw(fp))!=EOF)
+{
+count=0;
+for(i=2;i<no;i++)
+{
+if(no%i==0)
+count++;
+}
+if(count==0)
+putw(no,p);
+}
+fclose(fp);
+fclose(p);
+p=fopen("prime","r");
+printf("data in file prime\n");
+while((no=getw(p))!=EOF)
+printf("%d\n",no);
+fclose(fp);
+getch();
+}

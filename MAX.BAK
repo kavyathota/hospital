@@ -1,0 +1,30 @@
+#include<iostream.h>
+#include<conio.h>
+template<class t>
+t max(t a,t b)
+{
+if(a>b)
+return a;
+else
+return b;
+}
+void main()
+{
+char c1,c2,c3;
+cout<<"enter two characters"<<endl;
+cin>>c1>>c2;
+c3=max(c1,c2);
+cout<<"max of two characters"<<endl<<c3<<endl;
+int a,b,c;
+cout<<"enter two integers"<<endl;
+cin>>a>>b;
+c=max(a,b);
+cout<<"max of two integers"<<endl<<c<<endl;
+float f1,f2,f3;
+cout<<"enter two floating points"<<endl;
+cin>>f1>>f2;
+f3=max(f1,f2);
+cout<<"max of two floating points"<<endl<<f3<<endl;
+getch();
+}
+

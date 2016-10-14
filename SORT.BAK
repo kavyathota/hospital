@@ -1,0 +1,65 @@
+#include<iostream.h>
+#include<conio.h>
+class array
+{
+int *a,s;
+public:
+void sort();
+void read(int);
+void display();
+};
+void array::read(int z)
+{
+s=z;
+a=new int[s];
+cout<<"enter array ";
+for(int i=0;i<n;i++)
+cin>>a[i];
+}
+void array::display()
+{
+cout<<"array";
+for(int i=0;i<n;i++)
+cout<<"a[i]\t";
+}
+void array::sort()
+{
+int c;
+for(int i=0;i<n/2;i++)
+{
+for(int j=0;j<n/2;j++)
+{
+if(a[i]<a[j])
+{
+c=a[i];
+a[i]=a[j];
+a[j]=c;
+}
+}
+}
+for(int i=n/2;i<n;i++)
+{
+for(int j=n/2;j<n;j++)
+{
+if(a[i]>a[j])
+{
+c=a[i];
+a[i]=a[j];
+a[j]=c;
+}
+}
+}
+}
+void main()
+{
+array x;
+int n
+cout<<"enter array size";
+cin>>n;
+x.read(n);
+cout<<"before sorting:";
+x.display();
+x.sort();
+cout<<"after sorting:";
+x.display();
+}
