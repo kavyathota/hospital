@@ -242,6 +242,22 @@ while(1)
 {
 cout<<"enter ur choice\n1.consultancy\n2.admit\n3.discharge\n4.exit portal\n";
 cin>>s;
+	
+while (s < 1 || s > 4)
+		{
+			cout << "\nInvalid choice, try again:\n";
+			cin >> s;
+			// not a numeric character, probably
+			// clear the failure and pull off the non-numeric character
+			if (cin.fail())
+			{
+				cin.clear();
+				char c;
+				cin >> c;
+			}
+		}
+
+	
 switch(s)
 {
 case 1:
